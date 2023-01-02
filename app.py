@@ -75,5 +75,5 @@ async def main_page(requests):
 if __name__ == "__main__":
     app = web.Application()
     aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader('./template'))
-    app.add_routes([web.get('/', main_page)])
+    app.add_routes([web.get('/index', main_page)])
     web.run_app(app)
